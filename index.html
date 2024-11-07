@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Mistry - Front End Developer</title>
+
+    <!-- Load animation styles and animation component -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Gradient Background */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #1a1a1a, #4a4a8b);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        /* Animation for Background Gradient */
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: transparent;
+            padding: 1.5rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #9b59b6, #4a4a8b);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(45deg, #f1c40f, #9b59b6);
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 10rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 100px; /* To offset the navbar */
+        }
+
+        /* Animated Container for Sections */
+        .animate-container {
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        /* Animation Effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2.5rem;
+            color: #9b59b6;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin-top: 100px; /* Adjusted for navbar space */
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #9b59b6;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .hero-animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Section with purple background */
+        section.purple-bg {
+            background: linear-gradient(135deg, #2e2b47, #4a4a8b);
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 4rem; /* Increased spacing between sections */
+        }
+
+        section ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        section ul li {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Fix: Adjust section position on click */
+        section:target {
+            padding-top: 100px; /* Ensures the section starts below the navbar */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content, .hero-animation {
+                max-width: 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content animate-container">
+            <h1 class="animate__animated animate__fadeInDown">Sahil Mistry</h1>
+            <h2 class="animate__animated animate__fadeInUp">Front End Developer</h2>
+            <div class="contact-info animate__animated animate__fadeIn">
+                <p>📧 sahilmistry444@gmail.com</p>
+                <p>📱 +91 9619036623</p>
+                <p>📍 Mumbai, India</p>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <dotlottie-player src="https://lottie.host/da98a79a-2a54-484a-8488-3e3b266d588d/YjSW7CrPXZ.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="purple-bg animate-container">
+        <h2 class="section-title">About Me</h2>
+        <p>Hello! I'm Sahil Mistry, a passionate front-end developer skilled in creating responsive, visually appealing websites. With a strong background in web development and a keen eye for design, I love building websites that offer a seamless user experience.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="purple-bg animate-container">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React.js, Tailwind CSS</li>
+            <li>Responsive Web Design</li>
+            <li>Problem-solving and Fast Learning</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="purple-bg animate-container">
+        <h2 class="section-title">Experience</h2>
+        <h3>Web Developer Intern & Digital Marketing Head</h3>
+        <p>Talatis Property Consultancy Pvt Ltd</p>
+        <p>Generated leads from websites and social media platforms to drive growth for the company.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="purple-bg animate-container">
+        <h2 class="section-title">Projects</h2>
+        <h3>Kisan Bazaar</h3>
+        <p>An online local grocery store that sources vegetables from street vendors to cut costs for consumers.</p>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="purple-bg animate-container">
+        <h2 class="section-title">Resume</h2>
+        <p>You can view or download my resume <a href="resume-link.pdf" target="_blank" style="color: #f1c40f;">here</a>.</p>
+    </section>
+
+</body>
+</html>
